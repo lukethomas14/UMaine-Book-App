@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="span9">
+    <%= render :partial => "books/books", :object => @books %>
+  </div>
+  <div class="span3">
+    <h2>Search</h2>
+    <p>Is your book in stock? Search the ISBN:</p>
+    <%= form_tag root_path, :method => 'get' do %>
+      <p>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search", :class => 'btn btn-success', :name => nil %>
+      </p>
+    <% end %>            
+  </div>
+</div>

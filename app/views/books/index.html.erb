@@ -1,0 +1,5 @@
+<%= render :partial => "books", :object => @books %>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_book_path,
+            :class => 'btn btn-primary' %>
